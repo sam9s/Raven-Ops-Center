@@ -1,0 +1,1808 @@
+Why This is So Powerful
+0:00
+Last night, I was laying in bed and I
+0:01
+texted Klouse to build me a YouTube
+0:03
+dashboard. And I told her that I was
+0:04
+about to go to sleep so that I wouldn't
+0:06
+be around. So, it spun up the initial
+0:07
+page and then it gave itself six more
+0:09
+to-dos that it would take care of while
+0:10
+I was sleeping. And then when I woke up
+0:12
+and I opened up my computer, I had this.
+0:14
+I've got a YouTube analytics dashboard
+0:15
+where I can track my 7-day stats, my
+0:17
+30-day stats. I can look at my videos
+0:19
+and see how they're performing relative
+0:20
+to other videos. I've got a hub to look
+0:21
+at all my comments, whether that's hot
+0:23
+topics, common questions, pain points,
+0:25
+or just looking at all the recent
+0:26
+comments on here. It's able to pull in
+0:28
+competitor videos and see which of these
+0:29
+are breaking out. And then it uses all
+0:31
+of that data to help me come up with
+0:32
+ideas. So, it comes up with titles for
+0:34
+YouTube videos that I could make based
+0:36
+on my audience and based on the trends.
+0:37
+This is just V1. It did this while I was
+0:39
+sleeping.
+0:41
+So, this is my dashboard that my
+0:43
+ultimate assistant Klouse built for me.
+0:44
+In here, I can see all the tasks that
+0:46
+he's working on, what's in the backlog,
+0:47
+and I can even see up here when he's
+0:49
+actually working or when he's not. So,
+0:51
+last night before I go to bed, I
+0:52
+basically say, "Hey, all night when I'm
+0:54
+sleeping, I want you to build me a
+0:55
+YouTube dashboard." And so we put
+0:57
+together a speclist. He threw all of his
+0:59
+tasks in the to-do section as you can
+1:01
+see. So of course I go to bed. I wake up
+1:03
+feeling like a kid on Christmas. And
+1:04
+then I check in on the morning and he
+1:06
+says, "The YouTube dashboard MVP is
+1:08
+done." And so I come into the dashboard
+1:09
+this morning and I can see that
+1:11
+everything has now been moved over here
+1:12
+to done. And this is what we got. So
+1:15
+hopping back into my Cloud dashboard, if
+1:17
+I now go to the log, I can see
+1:18
+everything that he does. So if I scroll
+1:20
+down to where it would have been this
+1:22
+morning. So last night I went to bed at
+1:24
+like midnight. So right here is where I
+1:26
+started this. And then after we kicked
+1:28
+off all the spec docs and I added all of
+1:29
+these tasks to his backlog. Look what he
+1:32
+did. 12:31 did something. 12:48, 1:15,
+1:35
+142, 208, 234, like all night up until
+1:38
+like 7 when I checked in on him and he
+1:40
+started doing some daily pull stuff in
+1:41
+the morning. He was just working on the
+1:43
+YouTube dashboard all night long. So I
+1:44
+mean, if that doesn't at least get you a
+1:46
+little bit excited, then I don't know
+1:47
+what will. So today I'm going to be
+1:48
+going over this dashboard, how I built
+1:50
+it, how you can create your own version
+1:52
+of Clouse. So, pretty much everything
+1:53
+that I've done with my Clawbot here and
+1:55
+then I'm going to talk about five hacks
+1:56
+for a smarter assistant because it is a
+1:58
+really smart tool, but there's a lot of
+2:00
+things that you have to overcome and
+2:01
+I've had a lot of frustration when I was
+2:03
+building out this dashboard and getting
+2:05
+clouds to work in a way that actually
+2:06
+makes me more efficient rather than
+2:07
+less. Now, the reason that I'm actually
+2:09
+so excited by this and I've been having
+2:10
+so much fun with it is because it's like
+2:12
+the end ultimate assistant except for it
+2:14
+is 15 times more powerful. This is one
+2:17
+of the videos I made about Enidend that
+2:18
+went viral and it's the ultimate
+2:20
+assistant which I've configured to have
+2:21
+an email agent, a calendar agent,
+2:23
+contact agent, content creator agent, a
+2:25
+search tool. If you think about it, the
+2:27
+functionality is really not that much.
+2:29
+We're able to talk to it through
+2:30
+Telegram and it responds to us in
+2:32
+Telegram. And so all of the sub aents I
+2:33
+obviously had to build. So for example,
+2:35
+the email agent looks like this with all
+2:36
+the email tools. And if I wanted to add
+2:38
+a different type of agent, I would have
+2:39
+to go into Niten and build that out. But
+2:41
+what happens with Claus is really cool
+2:42
+because it's like let's say you have
+2:44
+five functions and if you want to figure
+2:46
+out if you can do something else like
+2:47
+hey Claus can you send voice notes? Sure
+2:49
+let me just research how that works.
+2:51
+Okay cool here's how I could do that. Do
+2:53
+you want me to actually build this in?
+2:54
+So basically any feature that you could
+2:56
+describe Klouse will figure out how to
+2:57
+do it and if it's possible it will just
+2:59
+do it for you. What's on your end of
+3:01
+course is actually maybe going and
+3:02
+creating an API and putting that in your
+3:05
+or maybe going and paying for a plan and
+3:07
+then giving him that username or
+3:08
+something like that. So yeah, here's
+Klaus Showcase
+3:10
+where I put in my Claus master guide
+3:11
+access and capabilities. Right now, this
+3:13
+is what it's got access to. GitHub,
+3:15
+Brave Search, OpenAI, 11 Labs, PDF
+3:17
+Shift, Appify, ClickUp, Google
+3:19
+Workspace, and then some YouTube stuff
+3:20
+like that. We've got understanding of
+3:22
+how the memory system works. It
+3:23
+understands when to send voice notes,
+3:25
+which is only when I send him a voice
+3:26
+note. Here we have some information on
+3:28
+what it should do freely and what would
+3:29
+require permission. And then you can see
+3:30
+what we've built together. So the first
+3:32
+one is obviously the cloud dashboard,
+3:33
+and here's what it does. We've got the
+3:34
+YouTube intelligence dashboard, and
+3:36
+here's what it does. I'm still impressed
+3:37
+that it built this while I was sleeping.
+3:38
+Super cool. It can do branded PDF
+3:40
+reports and then it has scheduled
+3:42
+triggers to do things like daily pulses,
+3:44
+audits, email monitoring, checking
+3:46
+tasks, and obviously this isn't
+3:48
+completely updated because I added some
+3:50
+more stuff in after this guide. All
+3:52
+right, so before we actually break down
+3:54
+exactly what I've done and how you can
+3:56
+replicate this, let's just go over a few
+3:57
+more features in this dashboard so you
+3:59
+can get a feeling of what I've actually
+4:01
+built here with Klouse. So, of course,
+4:02
+we are talking to Klaus through
+4:03
+Telegram. And you can see the last thing
+4:05
+I just had him make a change. I said,
+4:06
+"This is perfect. You're the best." and
+4:07
+he reacted to my text, which I thought
+4:09
+was pretty cool that they can react. And
+4:11
+then the reason why it says model
+4:12
+claopus 4x5 is because I wanted to have
+4:14
+visibility. So every time I messaged
+4:16
+him, I told him to tell me what model
+4:19
+he's using. So this started as a pretty
+4:20
+simple dashboard just so I could track
+4:22
+what was going on. But I told him, "Hey,
+4:24
+your job is to save me time. I want you
+4:26
+to be proactive, understand my
+4:27
+workflows, and suggest things all the
+4:29
+time." So specifically in this dashboard
+4:31
+while we were building it together, I
+4:32
+said, "Suggest features, whatever you
+4:34
+think might work and whatever you think
+4:36
+will help you work better and help me
+4:37
+work better. Just tell me that you're
+4:39
+going to implement it." And so one of
+4:40
+the first things that he did was he
+4:41
+built this little thing up in the top
+4:43
+left so that I can actually see him,
+4:44
+which was a little bit scary, but also
+4:46
+kind of cool because now I can look over
+4:48
+and I can see if it's idle, then he's
+4:50
+not working on anything. But if he's
+4:52
+thinking or working, then I know that
+4:53
+there is something going on. So let me
+4:55
+go ahead and shoot something off and we
+4:56
+will see him spin up and start working.
+4:58
+All right. So, just to start off here,
+4:59
+I'm saying, "Hey, Klaus, I need you to
+5:00
+spin up a sub agent to do some in-depth
+5:02
+research about what's going on today
+5:03
+with Naden. There was some news about a
+5:05
+security thing, and I want you to create
+5:07
+a report for me." So, obviously, we can
+5:09
+see up here that it is thinking. It also
+5:11
+has spun up a sub agent, which we are
+5:12
+able to visually see, which is pretty
+5:14
+cool. And I will get back to you once we
+5:16
+have that report. And of course, it was
+5:18
+able to add an inrogress task right
+5:20
+here. And then when it's done, hopefully
+5:22
+it should move it over to done. But
+5:23
+that's a really cool thing about this
+5:24
+Cananban board is that if I have a task
+5:26
+and I come in here and I just add a new
+5:28
+to-do, then Claus will automatically
+5:30
+pick that up and start working on it. Or
+5:32
+similarly, if I give him a note down
+5:34
+here, I can send something off just for
+5:35
+him to log it in his memory. Or even if
+5:37
+I wanted to take action on it. So like
+5:39
+here, I said testing if this works. When
+5:41
+you see this, tell me a joke. And then
+5:42
+it shot me a joke in my telegram. And
+5:44
+every time it actually acknowledges
+5:45
+these, it marks them as seen by Clouse.
+5:47
+So I know which ones it's processed or
+5:49
+not. So here's a great example of how it
+5:51
+knows about me and my business because
+5:53
+it came back and said the TLDDR is
+5:55
+anyone running any needs to upgrade
+5:56
+because of this vulnerability. So do you
+5:58
+want me to turn this into some content
+5:59
+for you? Because it could be a quick
+6:00
+YouTube short or community post which is
+6:02
+the kind of thing that your audience
+6:04
+needs to hear about fast. But anyways, I
+6:05
+just said no post for now. I just want
+6:07
+the report. So it's throwing that
+6:08
+together now. All right. So it said that
+6:10
+the report is done. If I close out of
+6:12
+Telegram, we should see that this got
+6:13
+moved to done. And the reason why it's a
+6:15
+different color is because these are
+6:16
+actually a priority switch, not like a a
+6:19
+status. As you can see, if I move this
+6:20
+over here, it's just a priority thing.
+6:22
+So anyways, if I go ahead and click on
+6:23
+the docs tab right here in our
+6:25
+dashboard, you can see that we have a
+6:26
+new doc about security, which is end
+6:28
+security vulnerability report. So now
+6:30
+I'm able to actually read through this
+6:32
+entire report that it made. We've got
+6:33
+the date, classification, the exact
+6:35
+summary, vulnerability details, and we
+6:37
+can continue to scroll down and see this
+6:38
+entire markdown format report that it
+6:40
+was able to make for us. And if I wanted
+6:42
+to change anything about this, I could
+6:43
+go ahead and edit it, and then it would
+6:45
+bring up this editor for us to change
+6:47
+something in the doc, save it. So now we
+6:48
+have a really cool place where every
+6:50
+single time that we ask Claus to create
+6:51
+some sort of file for us, it's able to
+6:53
+just drop it in here, and then we can
+6:54
+look at it and save it. So I thought I'd
+6:56
+show you guys off one of those heartbeat
+6:58
+functionalities. And I'll explain
+6:59
+exactly what a heartbeat is and how that
+7:00
+works in a bit. But I'm going to go
+7:02
+ahead and add a new task right here that
+7:03
+just says, um, make Nate laugh. And I'm
+7:07
+just gonna say, "Usually in the
+7:09
+afternoon, Nate gets sad, so tell him a
+7:11
+joke about AI." So, while we're waiting
+7:13
+for Claus to actually pick that up and
+7:15
+shoot me off a joke, let's see what we
+7:16
+have done here, which are some of our
+7:18
+scheduled deliverables, which are
+7:19
+workflows that happen either daily or
+7:21
+weekly. So, for example, with the weekly
+7:23
+YouTube audits, every single week on I
+7:25
+think it's like Monday night or Sunday
+7:27
+night, I'm going to get one of these
+7:28
+YouTube audits. And obviously here, I
+7:30
+was playing around with some different
+7:31
+formats, but this is kind of what they
+7:33
+look like now. They have my brand
+7:35
+information, although this one didn't
+7:36
+have the logo. Let's try this one. It'll
+7:38
+have my logo. It'll have my brand
+7:40
+guidelines. And it sends me a SWAT
+7:42
+analysis and a YouTube channel audit
+7:43
+about strengths, weaknesses, metrics,
+7:45
+and some other things that we need to
+7:47
+do. Obviously, there's a bit of a
+7:48
+spacing issue here, but we get some
+7:50
+recent content analysis, strategic
+7:52
+recommendations. And what you'll notice
+7:53
+here is that we're signed in here as
+7:55
+Klouse. So, Klouse has its own Gmail,
+7:57
+Drive, Docs, Sheets, its own accounts
+8:00
+for pretty much everything because I
+8:01
+didn't want it to be in my environment.
+8:03
+I wanted to treat this as a person that
+8:04
+I could talk to, forward emails to and
+8:07
+have it respond like that. So, it
+8:08
+created a drive called cloud
+8:10
+deliverables and that's where it was
+8:11
+able to store all of these things like
+8:12
+the daily pulses, the SWAT analysis, the
+8:14
+logos, audits, and YouTube audits. So,
+8:17
+obviously security is a huge topic when
+8:19
+we're talking about Cloudbot. So, the
+8:21
+security audit that I had it run for me
+8:22
+here, this was actually just a Google
+8:24
+doc rather than a PDF, but it pointed
+8:26
+out all these issues. It ranked them for
+8:28
+different risk levels, and then I was
+8:29
+able to have Claus just go ahead and fix
+8:31
+all these things. And I'm constantly
+8:32
+checking with Klouse to make sure that
+8:34
+we are completely fine and that our
+8:36
+port's not exposed and stuff like that.
+8:37
+And obviously I'm not like a security
+8:39
+expert. So I'm doing the best that I can
+8:40
+working with Klouse with cloud code with
+8:42
+perplexity figuring out how I can be
+8:44
+safe. But everyone out there that wants
+8:45
+to experiment with cloudbot, just make
+8:47
+sure that you are thinking about
+8:48
+security and not giving access to tons
+8:50
+of different random things if you don't
+8:52
+really know what's going on. Okay, so
+8:53
+what I did is I said, "How often does
+8:55
+your heartbeat run and what does it
+8:56
+actually do?" And it said that my
+8:57
+heartbeat runs every 30 minutes. And
+8:59
+every time that my heartbeat runs, it
+9:01
+basically wakes up Klaus. And Claus will
+9:03
+make sure that both the dashboards are
+9:04
+running. It will do a sync. It will
+9:05
+check for notes, which you can see it
+9:07
+actually just moved the make Nate laugh
+9:08
+from in progress to done, I believe. As
+9:11
+you can see, it will monitor X and
+9:13
+Twitter. It will do a daily pulse. And
+9:14
+the idea is that I wake up with no
+9:16
+memory. So when I have my heartbeats, I
+9:18
+stay proactive and I check in on things
+9:19
+and do things in the background for you.
+9:21
+So anyways, then it said, "Yep, just saw
+9:23
+that task Q. Make Nate laugh high
+9:24
+priority." And the joke is, what do you
+9:26
+call an AI that finally passes the
+9:28
+touring test? Unemployed, the humans
+9:30
+just move the goalpost again. I don't
+9:31
+really get that one. So, let's actually
+Build Your Own Klaus
+9:32
+move on to the next part, which is how
+9:34
+can you create your own version of
+9:35
+Klouse? So, the first thing, of course,
+9:37
+you want to do is set up Cloudbot.
+9:38
+Whether you're going to do that on a Mac
+9:39
+Mini or whether you're going to do that
+9:40
+on VPS, I will tag a full setup guide
+9:43
+video right up here that I made a few
+9:45
+days ago and you can get that set up on
+9:46
+a VPS. So what I actually did is I came
+9:49
+into Klaus and I was like, "Hey, I want
+9:50
+to teach my YouTube channel how they can
+9:53
+basically build exactly what I built for
+9:56
+you and how we configure you." So I had
+9:58
+it create this guide called build your
+9:59
+own Klouse, a step-by-step guide to
+10:01
+creating an AI executive assistant.
+10:03
+Clouse handles daily briefings, monitors
+10:05
+my business, runs security audits, and
+10:06
+proactively services opportunities, and
+10:08
+you can build your own version. So time
+10:10
+investment, 4 to 6 hours over the
+10:11
+weekend to get the core system running,
+10:13
+and cost about 50 bucks a month. I'm
+10:15
+going to say that it's going to be
+10:16
+higher than that. So, I've obviously
+10:17
+spent lots of hours playing around with
+10:18
+Cloudbot, doing different things, and I
+10:20
+spun up this one to turn this into an
+10:22
+executive assistant. And you can see
+10:23
+with just this specific Cloudbot that
+10:25
+I'm using, Klouse, I've used almost a
+10:27
+quarter of a billion tokens in the past
+10:29
+just 3 days, which translate to about
+10:32
+$223
+10:33
+in actual money. But keep in mind, all
+10:36
+of this has been done with Opus 4.5. So,
+10:38
+if you went to Sonnet 4.5 or if you use
+10:40
+a locally hosted model, your cost would
+10:42
+be less. And the reason why I'm not
+10:44
+using like my max plan, the $200 a month
+10:46
+plan for which I would get way more
+10:47
+tokens with is because Anthropic has
+10:50
+been banning accounts left and right for
+10:51
+violating terms of service. So if you
+10:53
+are currently using Cloudbot with a max
+10:54
+plan or any Cloud plan at all, you have
+10:56
+to switch it over to API. So anyways,
+10:59
+what happens when you actually get this
+11:00
+set up? Well, you have to get onboarded.
+11:02
+So the first thing it's going to start
+11:03
+to do is it's going to start to ask you
+11:04
+questions. So you have to give it an
+11:06
+identity. You have to talk about who are
+11:08
+you, what its role is, what you want it
+11:09
+to do, how it should behave, and you
+11:11
+should also just brain dump everything
+11:12
+about you and your business. So, I spent
+11:14
+like almost an hour just talking to
+11:15
+Claudebot, talking to Klouse, letting
+11:17
+him get to know me. I'm telling him, ask
+11:18
+me questions. What do you not know about
+11:20
+me? What do you need to know more about?
+11:21
+And this ends up creating a soul file.
+11:23
+So, the soul.md is basically who is your
+11:26
+AI and what's its job? And then also
+11:28
+creates a user.md file, which is
+11:29
+basically who am I and what do I do? So,
+11:31
+right here, I just asked Claus to
+11:32
+summarize the soul and user files. And
+11:35
+it came back with, "I'm Klouse, your
+11:37
+executive assistant. My job is to log
+11:38
+everything, track all my work,
+11:40
+communicate casual but concise, be
+11:42
+resourceful, and the user summary is
+11:43
+that you are Nate based in Chicago. Your
+11:45
+background is nontechnical, graduated
+11:47
+May 24, blah blah blah." So, it knows
+11:49
+all of this kind of stuff about my
+11:50
+business, about the platform, even know
+11:52
+some people on my team and stuff like
+11:54
+that. So, here's where I talk about
+11:55
+having the getting to know you
+11:56
+conversation, of course, covering
+11:58
+everything that you want it to know
+11:59
+about your business. And then, like I
+12:00
+said, prompt the AI to ask you questions
+12:02
+and be proactive about it. and the AI
+12:04
+will basically interview you which makes
+12:06
+everything better. So step two is to
+12:08
+create dedicated accounts for your AI.
+12:10
+So I don't think that you should be
+12:11
+giving Klouse or whatever you call it
+12:13
+access to your accounts directly. I
+12:15
+didn't want Claus to be logged in as you
+12:17
+know my main email or my main calendar
+12:19
+or my main ClickUp cuz you just don't
+12:21
+really know what could happen. So
+12:22
+instead if I give it an email account
+12:24
+and I wanted to help me manage my email,
+12:26
+well I can just forward at things and I
+12:27
+can CC him on things and that way he's
+12:30
+kind of looped in as I would treat an
+12:31
+actual like executive assistant. The way
+12:33
+that I think about it is if you had like
+12:35
+a VA or someone that you brought onto
+12:37
+the team and you wanted to take on a lot
+12:38
+of administrative roles, would you give
+12:40
+them right away like credit card
+12:41
+information, bank account information,
+12:43
+passwords, access to everything? I I
+12:45
+probably wouldn't. And on top of that,
+12:47
+Claus has its own Drive, Docs, Calendar,
+12:50
+so that it can see my calendar and it
+12:52
+can, you know, share files with me and
+12:54
+request access, but it's not actually
+12:56
+going to be deleting things from my
+12:57
+environment just in case. Same thing for
+12:59
+task management. It's got a ClickUp
+13:00
+account. It can view my list. It can see
+13:02
+what's going on in the business, but
+13:03
+it's not able to really delete things
+13:05
+and change anything unless I give it
+13:06
+specific access to do so. And I put it
+13:08
+in its own environment with its own list
+13:11
+that I manage my tasks on now that it
+13:13
+can actually like change things and move
+13:14
+them around just to see how it's going
+13:16
+to work. And then of course, when it
+13:17
+comes to credentials, you want to be
+13:19
+storing this in av file. You don't want
+13:21
+to give it straight to Klaus in a
+13:24
+conversation history in Telegram in the,
+13:27
+you know, hub. So you can say, "Hey
+13:28
+Claus, I don't want you to ever mention
+13:30
+an API key in our conversation. I just
+13:32
+want you to use placeholders and just
+13:34
+help me get into myv file and I can drop
+13:36
+them in there." So you can either do
+13:38
+that through your terminal or you can
+13:39
+just open up in your file explorer and
+13:41
+go to thev file and add in all of your
+13:44
+API keys. So then of course on top of
+13:46
+this I just gave it read access to
+13:47
+pretty much everything. All the APIs
+13:49
+that it needs to use for you know
+13:50
+analytics or appy and things like that.
+13:52
+I gave it pretty much read access unless
+13:54
+it needs to do something. And if it
+13:56
+needs to do something, I would set up
+13:57
+like a spending limit or I would just
+13:59
+basically make sure that there's very
+14:00
+strict permissions. So it can look at my
+14:02
+calendar. I can forward it emails. It
+14:04
+has visibility into my tasks. And it has
+14:06
+access to certain things that I have as
+14:08
+far as like socials, but it can only
+14:10
+read and extract information. So it
+14:12
+can't post on my Twitter or reply to
+14:14
+things on YouTube or Twitter, but it can
+14:16
+grab a bunch of data, which is super
+14:17
+helpful. So phase four is about
+14:19
+developing the proactive mindset. This
+14:21
+is where it gets really, really powerful
+14:22
+and where it starts to feel different
+14:23
+than just like a cloud code or, you
+14:26
+know, an NN AI agent. So, I'm
+14:28
+consistently telling it, you know, I'm
+14:29
+running a lean business. I want to save
+14:31
+time. I want you to figure out
+14:33
+opportunities to be proactive and make
+14:35
+my life as easy as possible. Only loop
+14:37
+me in when you really need something
+14:38
+from me. So, you can say something like,
+14:40
+"Based on everything you know about me,
+14:41
+my business, and my goals, what are all
+14:43
+the ways that you could proactively help
+14:44
+me? Don't wait for me to ask, but what
+14:46
+would you do if your job was to save me
+14:48
+time every single day?" And after that,
+14:50
+it just started brainstorming and it
+14:51
+suggested a ton of ideas. So, at the
+14:54
+moment, the proactive things that I have
+14:55
+it doing are this. I've got a morning AI
+14:57
+news briefing. And it's not just
+14:59
+general, it's also like super specific
+15:00
+to me. I've got ClickUp task summaries
+15:02
+every day. So, every morning it looks at
+15:04
+my ClickUp and it says, "Hey, here's
+15:05
+what you've got today." And also, it
+15:07
+will try to give me things proactively
+15:09
+if it can help with any of those. So,
+15:10
+sometimes it'll do extra research for
+15:12
+me. If it's like a content flow or if
+15:14
+I've got a really busy day, it can maybe
+15:15
+suggest moving some of my, you know,
+15:17
+events on my calendar, things like that.
+15:18
+It does email monitoring every single 10
+15:20
+minutes. So, in its inbox, if I ever
+15:22
+send it something, it should respond
+15:23
+within 10 minutes or it should, you
+15:25
+know, kick off research or do something
+15:26
+else about it in 10 minutes. And with
+15:28
+the dashboard notes, it's supposed to
+15:29
+check this every 5 minutes, but we just
+15:31
+saw an example where it thought it was
+15:32
+every 30. So, there is a bit of a back
+15:34
+and forth. I will say the persistent
+15:36
+memory is cool, but it's not perfect at
+15:38
+all because it chooses what memories to
+15:40
+store and then sometimes it just forgets
+15:42
+things. And I'm going to talk about this
+15:43
+later. You can see that I've got a
+15:44
+memory system explainer doc that I had
+15:46
+to create. But the memory can sometimes
+15:47
+be a little frustrating. But honestly,
+15:49
+that's to be expected. So, you just have
+15:50
+to figure out, okay, how can I be
+15:52
+smarter than this thing and prompt it
+15:54
+and use it in the right way because yes,
+15:55
+it's really smart, but you have to use
+15:57
+it the right way because it can also be
+15:58
+super super dumb. I will admit last
+16:00
+night I got pretty frustrated at it and
+16:02
+I started calling it dumb and these
+16:03
+other names because I was just like I
+16:05
+had had it. Anyways, weekly it does
+16:07
+these things as we already talked about
+16:08
+and now we have the save me time
+16:10
+framework. So ask your AI, "What
+16:12
+currently takes me 20 plus minutes that
+16:14
+you could turn into a two-minute
+16:15
+review?" And asking it questions like
+16:17
+that really helps you spot these
+16:19
+opportunities. So when you actually want
+16:20
+to set up those automated workflows,
+16:22
+it's so so simple. You just ask it to do
+16:24
+something. So once it started analyzing
+16:26
+my YouTube and Twitter, I said, "Oh,
+16:27
+that's actually really cool. Can you
+16:28
+just set this up so that every morning
+16:30
+at 7:00 a.m. you do that?" And of
+16:32
+course, I could come back right here to
+16:34
+the actual log and see right here, 7
+16:35
+a.m. daily pulse has been delivered. And
+16:37
+then if I go up to 8 a.m. we have the
+16:39
+heartbeat dashboard notes none Gmail
+16:41
+none clickup summary sent to telegram.
+16:43
+So this just shows that it is working on
+16:45
+a cron and all you had to do was ask it
+16:47
+in natural language. So it's super cool.
+16:49
+Anyways then we got to the point where I
+16:50
+was like okay I want to build a
+16:52
+dashboard and I know that a lot of you
+16:53
+guys in the last video I showed the
+16:55
+dashboard asked about how I built it and
+16:57
+really it's just a matter of going back
+16:58
+and forth but there are some hacks that
+17:00
+I want to talk about that really make it
+17:02
+easier to actually be able to build the
+17:03
+dashboard out. So first of all you want
+17:04
+to have a really clear goal of what
+17:06
+you're actually building. So my
+17:07
+components are a status panel. So I can
+17:09
+see if the AI is working idle or
+17:11
+offline. I can see if there's sub aents
+17:13
+and I can see what task it's currently
+17:14
+working on. Of course, we've got the
+17:16
+actual cambban board. So the to-do, the
+17:18
+in progress, the done. The AI will
+17:20
+update it as it works. The activity log
+17:22
+is like a non-negotiable. You have to
+17:24
+see every single time you do any action,
+17:26
+you have to log it. That's just the
+17:28
+ability for us to come here, drop in a
+17:30
+note, and then have it be able to store
+17:31
+that as memory. And honestly, this was
+17:33
+more so for me testing if it would
+17:35
+actually work. Because realistically, if
+17:36
+I wanted to drop in a note, I would
+17:38
+probably rather just come to Telegram
+17:39
+and shoot off a message. But the tough
+17:41
+part can be actually getting it to
+17:42
+remember to do things specifically like
+17:44
+updating the Camban board or logging
+17:46
+things. And so what I realize here is it
+17:48
+has to do with the memory. And a lot of
+17:50
+times it won't actually store things as
+17:51
+long-term memory or daily memory. So to
+17:54
+contextualize this a little bit, let me
+Memory Explained
+17:55
+go to the memory system explainer doc.
+17:57
+So this basically explains how
+17:59
+Cloudbot's memory works because it's not
+18:00
+super intuitive. We obviously have the
+18:02
+soul file, the user file, the identity
+18:04
+file. So, it's got these that it is able
+18:05
+to check in on, but then what it starts
+18:07
+to do is it creates these different
+18:08
+logs. So, it creates a daily log, which
+18:11
+are raw notes from each day. And that's
+18:13
+basically like what happened, decisions
+18:14
+made, context. It's a journal. But
+18:17
+again, the tough part is Claus chooses
+18:20
+what to put in the daily log journal.
+18:22
+And so, even sometimes I'm like, hey,
+18:23
+log that because you have to remember
+18:25
+it. Sometimes it won't. The long-term
+18:26
+memory are more of like the curated
+18:28
+highlights about your facts, your
+18:30
+lessons learned, your business, things
+18:31
+like that. And then when you're working
+18:33
+on specific projects, it can create
+18:35
+project specific memories. And so it
+18:37
+really is a matter of prompting it like
+18:38
+make sure you save this to that project
+18:40
+memory or save this to your daily log.
+18:42
+And if you're not doing that, then
+18:43
+you're going to be really confused as
+18:44
+far as like where is it getting into
+18:46
+information and why is it confused.
+18:48
+Okay, I just searched our chat history
+18:50
+for the word frustrating because I knew
+18:51
+I've said it to Klaus many times. And so
+18:53
+this is exactly what I'm talking about.
+18:55
+I said, "This is a problem. I need to be
+18:57
+able to know that you have memory that's
+18:58
+persistent. So if we're having a
+18:59
+conversation, you can see what I'm
+19:01
+talking about because you just sent me a
+19:02
+message about 4 minutes ago and all of a
+19:04
+sudden you forgot that context. So what
+19:06
+can I do in your configuration so that
+19:07
+this doesn't happen again? It's really
+19:08
+frustrating. I need to be able to trust
+19:10
+that I can have an ongoing conversation
+19:11
+with you. And then I would basically
+19:13
+just have to repaste in messages so it
+19:15
+could reand context of what we were just
+19:17
+talking about. And I'm not even
+19:19
+exaggerating. It would be like I would
+19:20
+say hello and then I would say my name
+19:22
+is Nate and it would be like okay cool.
+19:23
+And then I'd say like how's how are you
+19:26
+doing? And it would be like what's your
+19:26
+name? It's like that quick. it would
+19:28
+forget what we were talking about. So
+19:29
+really the key thing to remember is that
+19:31
+it's always basically going to wake up
+19:33
+with no memory. So those files are the
+19:35
+memory. And so that's why I'm telling it
+19:36
+log everything you do. Check these files
+19:39
+every time. Put that in the right spot.
+19:40
+And so this is a really nice segue into
+The 5 Hacks
+19:42
+the hacks that I wanted to talk about
+19:43
+because as I have been obviously playing
+19:46
+around with Cloudbot for days now, I've
+19:49
+learned a lot of things about the way
+19:50
+you can communicate with it to actually
+19:51
+make it do what you want to do. So the
+19:53
+first one right here is plan first. This
+19:55
+one is so important. If you've been
+19:57
+using cloud code for a while, you know
+19:58
+how important it is to use plan mode
+20:00
+first and then go ahead and execute. But
+20:01
+the tough part about planning first is
+20:04
+sometimes it'll make an amazing plan.
+20:06
+I'll spin up three sub agents. It'll
+20:07
+build me a beautiful plan and then I'll
+20:09
+say nice, execute that and it'll be like
+20:11
+execute what? And that just makes me
+20:13
+want to throw my monitor against the
+20:14
+wall. So what you could do there is you
+20:16
+could copy and paste the plan into the
+20:18
+next message and shoot it off. Or maybe
+20:19
+you could just say build a really good
+20:21
+plan and then execute. Cuz that still
+20:23
+increases the quality of the actual
+20:25
+solution itself. But another thing I
+20:26
+started doing which actually helped a
+20:28
+lot and I'm I'm going out of order a bit
+20:30
+here but I was just creating files all
+20:31
+the time. And so that's why I really
+20:33
+wanted to make this dashboard where I
+20:34
+could search through all my documents.
+20:36
+So if I go to like a you know PDF
+20:38
+generation I can search through and we
+20:39
+can see every doc that I've created and
+20:41
+I knew that this was going to be huge
+20:43
+because I ask it to create docs all the
+20:45
+time. Basically my hypothesis was if it
+20:47
+creates me this plan and then it creates
+20:49
+a document out of it. It can obviously
+20:50
+read those documents. So, I create a
+20:52
+plan doc and then I say, "Cool, execute
+20:54
+that plan doc." And then it's like it's
+20:56
+it's caught up on all the context right
+20:57
+there and I don't have to get so
+20:58
+frustrated. So, plan first and create
+21:01
+files for basically everything you're
+21:02
+doing. Just tell it to create a doc and
+21:04
+put it into your dashboard. So, the next
+21:05
+one is about proactivity. And so, we
+21:07
+already talked about this one a little
+21:08
+bit, but it's just the idea of thinking
+21:10
+about how can you make this thing
+21:11
+really, really awesome because if you
+21:14
+take away the proactivity, it's very,
+21:16
+very similar to a lot of the other AI
+21:18
+tools that you probably already use. So
+21:19
+proactivity not just meaning doing
+21:21
+things on a schedule because any
+21:22
+automation can check Twitter every 30
+21:23
+minutes and give you a breakdown.
+21:25
+Productivity in the way of like what do
+21:27
+you know about me and my business? Where
+21:28
+do you see what you're doing and where
+21:30
+I'm doing and figure out how you can
+21:32
+save me time and solve problems before I
+21:33
+even know that those problems exist? So
+21:35
+like reading through emails and reading
+21:37
+through ClickUp. And if you realize that
+21:38
+there might be an action item, just go
+21:39
+ahead and take that action. or when
+21:41
+you're running a SWAT analysis for me
+21:42
+and you have action items, why don't you
+21:44
+just take those action items, put them
+21:45
+in your own to-do list, and then start
+21:47
+like banging them out, which is
+21:49
+basically exactly how we were able to
+21:50
+actually have Claus work all night long
+21:52
+is I said, "Okay, let's brainstorm here.
+21:54
+Let's figure out what it would take to
+21:56
+build a YouTube dashboard and let's
+21:58
+basically make like six tasks to do
+22:00
+this." And they're chronological. And
+22:02
+what I want you to do is on your
+22:03
+heartbeat every 30 minutes or so, pick
+22:05
+up a task, contextualize. So read the
+22:07
+GitHub repository, read all of the past
+22:09
+stuff that's going on, and then build.
+22:11
+And then before you actually shut down
+22:13
+on that task, recommit it to GitHub and
+22:15
+re-update like all the information so
+22:17
+that next time you wake up with fresh
+22:18
+context and you pick up this task again,
+22:20
+you can actually understand where you
+22:22
+just left off. So that is the really
+22:24
+important part that takes a little bit
+22:25
+of more time to orchestrate. And like I
+22:27
+said, I got a little frustrated trying
+22:28
+to figure out how to do it. But it just
+22:30
+takes being logical and talking clearly.
+22:34
+Now, the next thing is discipline. So,
+22:35
+it's going to make a ton of mistakes.
+22:37
+Like, it just will. I've seen it make so
+22:38
+many more mistakes than I thought it
+22:40
+would. But the idea is when it makes a
+22:42
+mistake, that's an opportunity to learn,
+22:44
+both you and Klouse. So, when it makes a
+22:47
+mistake, I basically say, "hm, what I
+22:49
+want you to do is spin up some agents
+22:50
+and analyze and audit what you just did.
+22:53
+Why did that break? Why did it not work?
+22:55
+Analyze all the other options. And most
+22:57
+importantly, tell me which option will
+22:59
+make sure that this doesn't ever happen
+23:00
+again." And then turn all of that into a
+23:02
+doc and store that somewhere. And so
+23:04
+it's like how can I give it how can I
+23:06
+let it learn from its mistakes rather
+23:08
+than just saying you suck, you're doing
+23:11
+this bad, try again. And then the fifth
+23:12
+one was about memory. So all of these
+23:15
+hacks kind of, you know, flow into
+23:16
+memory. And we've talked about memory a
+23:17
+little bit, but that's like, like I
+23:19
+said, that's something that's really
+23:20
+frustrating. The reason I threw this on
+23:22
+here is because it's not just something
+23:23
+that's super intuitive. It just takes
+23:25
+actual time and repetition talking to
+23:27
+this thing and understanding how it
+23:29
+learns and how it sees things. So you'll
+23:31
+get better at understanding how to tweak
+23:33
+your prompts a little bit. so that it's
+23:34
+all in one go rather than multiple goes.
+23:37
+Because what's cool about Klouse is you
+23:39
+can shoot off like five messages in a
+23:40
+row and it will cue them. So it will go
+23:42
+ahead and do the first one and then it
+23:43
+will do the second one and it'll do the
+23:44
+third one. But it's doing each of them
+23:45
+individually. So if I schedule off like
+23:48
+three different things, it will do them
+23:49
+in order. So go ahead and tell me a
+23:51
+riddle. Find me a YouTube video today
+23:54
+about Claudebot that's performing really
+23:56
+well. Do some research on the difference
+23:58
+between pancakes and waffles. find me
+24:00
+some exp posts today about the end
+24:02
+vulnerability thing. But anyways, my
+24:04
+point being, if you wanted to send off
+24:06
+all of these three, but you wanted them
+24:07
+to be together, you have to put it in
+24:09
+the same box and the same message as you
+24:11
+send it off. So, it actually treats it
+24:12
+as one message. Now, I do have one final
+24:14
+bonus hack for you guys, which is cloud
+24:16
+code. If you get to a point where you're
+24:18
+confused and you just don't really
+24:19
+understand what you should be doing with
+24:20
+your maybe your configuration or your
+24:22
+keys or security, then definitely
+24:24
+utilize cloud code. And I will say I'm
+24:26
+not ashamed to admit that I did use
+24:28
+cloud code. So I set up a project called
+24:31
+Klouse and I basically gave cloud code
+24:33
+access to this project, right? And it
+24:35
+can see my backups, my configs, my docs,
+24:37
+my scripts, the cloud.mmd file, my
+24:39
+credentials and it understands how to
+24:41
+help me set up the environment. And
+24:42
+sometimes it actually helps to be able
+24:44
+to plan in here first and then take that
+24:46
+plan to Klouse because if you were going
+24:48
+to use like a claude or a perplexity to
+24:50
+help you set up this stuff anyways, you
+24:52
+might as well do it in a claude code
+24:53
+project that can actually help you
+24:54
+create files and navigate through a
+24:56
+project like this. It just felt like
+24:57
+there was way more context, especially
+24:59
+when I could give it a special system
+25:00
+prompt to help me with this project. So,
+25:03
+if you hit a roadblock, maybe just try
+25:05
+throwing some stuff into cloud code and
+25:06
+seeing what it can do. But anyways,
+Want to Master AI Automations?
+25:08
+there's nothing on the canban board
+25:09
+anymore, which means I need to load up
+25:11
+Claus with some tasks. So, I appreciate
+25:13
+you guys watching the video. And if you
+25:14
+learned something new or you enjoyed,
+25:15
+please give it a like. It definitely
+25:16
+helps me out a ton. If you guys want to
+25:17
+dive deeper into this kind of stuff or
+25:19
+you appreciate this style of video, then
+25:20
+definitely check out my plus community.
+25:21
+The link for that is down in the
+25:22
+description. We've got over 3,000
+25:24
+members who are building businesses with
+25:25
+AI. So, if you want to be surrounded by
+25:26
+that energy, then check it out. Anyways,
+25:28
+that's going to do it for this one. So,
+25:29
+if you guys enjoyed or you learned
+25:30
+something new, please give it a like. It
+25:31
+definitely helps me out a ton. And as
+25:33
+always, I appreciate you guys making it
+25:34
+to the end of the video. I'll see you on
+25:35
+the next one. Thanks everyone.

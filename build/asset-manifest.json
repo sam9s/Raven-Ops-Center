@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ee55c4a0.css",
+    "main.js": "/static/js/main.e8721166.js",
+    "static/js/453.b85f090a.chunk.js": "/static/js/453.b85f090a.chunk.js",
+    "static/media/Mokoto.ttf": "/static/media/Mokoto.b5028ec70d498a4e7f7b.ttf",
+    "index.html": "/index.html",
+    "main.ee55c4a0.css.map": "/static/css/main.ee55c4a0.css.map",
+    "main.e8721166.js.map": "/static/js/main.e8721166.js.map",
+    "453.b85f090a.chunk.js.map": "/static/js/453.b85f090a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee55c4a0.css",
+    "static/js/main.e8721166.js"
+  ]
+}

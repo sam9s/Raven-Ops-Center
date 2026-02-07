@@ -1,0 +1,5 @@
+#!/bin/bash
+# Unified Google CLI - Works from ANY channel (Slack, Telegram, WhatsApp)
+# Uses shared credentials from .secrets/
+
+node /root/.openclaw/workspace/skills/raven-google/unified-google.js "$@"
