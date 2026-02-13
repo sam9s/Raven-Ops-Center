@@ -2,12 +2,13 @@ import React from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Home from './pages/Home';
+import MorningBriefing from './pages/MorningBriefing';
 import Spotify from './pages/Spotify';
 import OAuthCallback from './pages/OAuthCallback';
 import './index.css';
 
 function App() {
-  const [activePage, setActivePage] = React.useState('home');
+  const [activePage, setActivePage] = React.useState('briefing');
   
   // Check if we're on the OAuth callback route
   const isOAuthCallback = window.location.pathname === '/auth/callback';
@@ -24,7 +25,7 @@ function App() {
         <Header />
         <main className="flex-1 overflow-y-auto p-6">
           {activePage === 'home' && <Home />}
-          {activePage === 'briefing' && <div className="text-raven-muted">Morning Briefing - Coming soon</div>}
+          {activePage === 'briefing' && <MorningBriefing />}
           {activePage === 'spotify' && <Spotify />}
           {activePage === 'projects' && <div className="text-raven-muted">Projects - Coming soon</div>}
           {activePage === 'social' && <div className="text-raven-muted">Social Intelligence - Coming soon</div>}

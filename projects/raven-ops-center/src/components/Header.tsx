@@ -11,9 +11,20 @@ export default function Header() {
 
   return (
     <header className="h-16 bg-raven-card border-b border-raven-border flex items-center justify-between px-6">
-      {/* Search */}
-      <div className="flex items-center gap-4 flex-1 max-w-xl">
-        <div className="relative flex-1">
+      {/* Logo and Search */}
+      <div className="flex items-center gap-6 flex-1">
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <img 
+            src="/logo.jpg" 
+            alt="Raven" 
+            className="w-10 h-10 rounded-lg object-cover"
+          />
+          <span className="text-xl font-bold gradient-text hidden md:block">Raven Ops</span>
+        </div>
+        
+        {/* Search */}
+        <div className="relative flex-1 max-w-xl">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-raven-muted" size={18} />
           <input
             type="text"
