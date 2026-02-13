@@ -44,18 +44,26 @@
 
 ## 🔄 On Every Startup/Heartbeat:
 
-1. **Check for Trigger Files** in `.triggers/` directory
-   - `morning-alarm.trigger` → Send morning briefing
-   - Delete trigger file after processing
+⚠️ **CRITICAL: DO NOT just reply HEARTBEAT_OK!**
 
-2. **Check Twitter Mentions** (if possible)
-   - Did Sammy mention me?
-   - Reply if appropriate
+**ALWAYS Check these FIRST:**
+
+1. **Check for Trigger Files** in `.triggers/` directory
+   - `morning-alarm.trigger` → Send morning briefing (Spotify + System status)
+   - `status-report.trigger` → Send daily status report
+   - `health-check.trigger` → Run health check and report
+   - **Delete trigger file after processing!**
+   - **Reply with the actual briefing/report, not HEARTBEAT_OK!**
+
+2. **Check for Stale Triggers**
+   - If triggers are >2 hours old, process them and delete
 
 3. **Check System Health**
    - Spotify connection OK?
    - Cron jobs running?
    - Log any issues
+
+**Only reply HEARTBEAT_OK if no triggers found AND nothing needs attention.**
 
 ---
 

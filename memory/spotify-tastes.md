@@ -23,6 +23,27 @@
 ### 2026-02-02
 | Time (IST) | Track | Artist | Album | Source | Note |
 |------------|-------|--------|-------|--------|------|
+| 2026-02-12 10:00 | Yeh Zameen Hai, Aasmaan Hai | Lucky Ali | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-12 11:00 | Ahista | Pankaj Udhas | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-11 20:00 | Mausam Pyar Ka | Asha Bhosle, Kishore Kumar, R. D. Burman | Sitamgar | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-11 21:00 | Kon Disa Mein - Extended Version | Varsha Singh Dhanoa, Guru Dhanoa, Maddy Sharma | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-11 22:00 | Besabriyaan | Armaan Malik, Amaal Mallik, Manoj Muntashir | M.S.Dhoni - The Untold Story | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-10 20:00 | Nain Ta Heere - Lisa | Lisa Mishra, Guru Randhawa, Vishal Shelke | Jugjugg Jeeyo | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-10 21:00 | Yamma Yamma - From "Shaan" | Mohammed Rafi, R. D. Burman | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-10 22:00 | Do Kadam | Sonu Nigam, A.R. Rahman | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-09 20:00 | Halka Halka Saroor | Kabul Bukhari, Nusrat Fateh Ali Khan | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-09 21:00 | Sanu Ek Pal Chain Na Aawe | Nusrat Fateh Ali Khan | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-08 15:30 | Sanu Ek Pal Chain Na Aawe | Nusrat Fateh Ali Khan | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-08 16:00 | Jhoole Jhoole Lal | Nusrat Fateh Ali Khan | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-08 17:30 | Mast Kalandar | Sunidhi Chauhan | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-08 18:00 | Kitni Haseen Zindagi | Lucky Ali | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-08 19:30 | Chandni Raten | Partners in Rhyme, Shamsa Kanwal | Unknown | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-08 20:00 | Tere Naina | Kailash Kher, Paresh Kamath, Naresh Kamath | Jhoomo Re | Auto-detected (Restored) | Listened 1800s |
+| 2026-02-13 07:30 | Zeehale Muskin - From "Ghulami" | Lata Mangeshkar, Shabbir Kumar | The Legend Forever, Vol. 1 | Auto-detected | Listened 1800s |
+| 2026-02-12 20:30 | Music - Kitni Khoobsoorat Yeh Tasveer Hai | R. D. Burman | Bemisal | Auto-detected | Listened 1801s |
+| 2026-02-12 20:00 | Khud Ko Samajh Na Akeli | Kishore Kumar | Waaris | Auto-detected | Listened 1799s |
+| 2026-02-12 19:30 | Mere Pyar Ki Umar Ho Itnee Sanam | Lata Mangeshkar, Manmohan Singh | Waaris | Auto-detected | Listened 1800s |
+| 2026-02-12 13:00 | I Am In Love (Karthik's Version) | Pritam, Karthik, Neelesh Misra | Once Upon A Time In Mumbaai | Auto-detected | Listened 1802s |
 | 2026-02-07 13:00 | Love Will Keep Us Alive | Eagles | Hell Freezes Over (Remaster 2018) | Auto-detected | Listened 1801s |
 | 2026-02-07 06:00 | I Want to Be Your Man | Roger | All the Greatest Hits | Auto-detected | Listened 1798s |
 | 2026-02-06 20:00 | Pehla Nasha | Udit Narayan, Sadhana Sargam | Jo Jeeta Wohi Sikandar | Auto-detected | Listened 1797s |

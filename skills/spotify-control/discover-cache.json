@@ -1,0 +1,50 @@
+{
+  "timestamp": 1770951315862,
+  "recommendations": [
+    {
+      "type": "song",
+      "title": "Itna Na Mujhse Tu Pyar Badha",
+      "subtitle": "Talat Mahmood, Lata Mangeshkar • Silky Voice Talat Mehmood",
+      "reason": "Because you listen to Lata Mangeshkar",
+      "match": 88,
+      "spotifyUrl": "https://open.spotify.com/track/6HIkXmOqrxiDeMoWW3Cdzo",
+      "image": "https://i.scdn.co/image/ab67616d0000b2731ac1afe842966323d72b3386"
+    },
+    {
+      "type": "song",
+      "title": "Lag Ja Gale Se Phir",
+      "subtitle": "Lata Mangeshkar • Lata Surili Phuljhadi",
+      "reason": "Because you listen to Lata Mangeshkar",
+      "match": 93,
+      "spotifyUrl": "https://open.spotify.com/track/3Cvffch2HPvomPpMYXWjvO",
+      "image": "https://i.scdn.co/image/ab67616d0000b273c82ce3089e89e18444d6e6b2"
+    },
+    {
+      "type": "song",
+      "title": "Ham Tere Pyar Mein",
+      "subtitle": "Lata Mangeshkar • Dil Ek Mandir",
+      "reason": "Because you listen to Lata Mangeshkar",
+      "match": 91,
+      "spotifyUrl": "https://open.spotify.com/track/1mzOWb5F1DhMydTUNszzMm",
+      "image": "https://i.scdn.co/image/ab67616d0000b2738c2f20d63faba706f3bad492"
+    },
+    {
+      "type": "song",
+      "title": "Ye Tune Kya Kiya",
+      "subtitle": "Pritam, Javed Bashir, Rajat Arora • Once Upon Ay Time In Mumbai Dobaara !",
+      "reason": "Because you listen to Lata Mangeshkar",
+      "match": 95,
+      "spotifyUrl": "https://open.spotify.com/track/2cPUB8EOT6AfJ8oxhyoNXL",
+      "image": "https://i.scdn.co/image/ab67616d0000b273fe77bd21eb38ff74b5f21524"
+    },
+    {
+      "type": "song",
+      "title": "Raabta",
+      "subtitle": "Pritam, Arijit Singh • Agent Vinod",
+      "reason": "Because you listen to Lata Mangeshkar",
+      "match": 92,
+      "spotifyUrl": "https://open.spotify.com/track/6FjbAnaPRPwiP3sciEYctO",
+      "image": "https://i.scdn.co/image/ab67616d0000b273e810a88d506b30bdc0935247"
+    }
+  ]
+}
