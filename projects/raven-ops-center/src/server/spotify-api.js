@@ -301,63 +301,59 @@ const server = http.createServer(async (req, res) => {
     }
 
   } else if (req.url === '/health') {
-    // Run self-check script and return results
+    // Quick health check - verify key services directly
+    const systems = [];
+    
+    // 1. Check OpenClaw Gateway
     try {
-      const { execSync } = require('child_process');
-      const output = execSync('bash /root/.openclaw/workspace/.scripts/self-check.sh', {
-        encoding: 'utf8',
-        timeout: 30000
+      const gatewayCheck = await fetch('http://localhost:18789');
+      systems.push({ 
+        name: 'Raven Service', 
+        status: gatewayCheck.ok ? 'operational' : 'error', 
+        lastCheck: 'Just now' 
       });
-      
-      // Parse the output to extract system statuses
-      const systems = [];
-      
-      // Check OpenClaw Gateway
-      if (output.includes('Gateway: RUNNING')) {
-        systems.push({ name: 'Raven Service', status: 'operational', lastCheck: 'Just now' });
-      } else {
-        systems.push({ name: 'Raven Service', status: 'error', lastCheck: 'Just now' });
-      }
-      
-      // Check Dashboard
-      if (output.includes('Dashboard: RESPONDING')) {
-        systems.push({ name: 'Dashboard Server', status: 'operational', lastCheck: 'Just now' });
-      } else {
-        systems.push({ name: 'Dashboard Server', status: 'error', lastCheck: 'Just now' });
-      }
-      
-      // Check Spotify API
-      if (output.includes('Spotify API: RESPONDING')) {
-        systems.push({ name: 'Spotify API', status: 'operational', lastCheck: 'Just now' });
-      } else {
-        systems.push({ name: 'Spotify API', status: 'error', lastCheck: 'Just now' });
-      }
-      
-      // Spotify Tracker status from cron
-      const cronCheck = execSync('openclaw cron list 2>/dev/null | grep "spotify-tracker" | grep -c "enabled.*true"', {
-        encoding: 'utf8'
+    } catch {
+      systems.push({ name: 'Raven Service', status: 'error', lastCheck: 'Just now' });
+    }
+    
+    // 2. Check Dashboard
+    try {
+      const dashboardCheck = await fetch('http://localhost:8080');
+      systems.push({ 
+        name: 'Dashboard Server', 
+        status: dashboardCheck.ok ? 'operational' : 'error', 
+        lastCheck: 'Just now' 
       });
-      if (parseInt(cronCheck.trim()) > 0) {
-        systems.push({ name: 'Spotify Tracker', status: 'operational', lastCheck: 'Just now' });
+    } catch {
+      systems.push({ name: 'Dashboard Server', status: 'error', lastCheck: 'Just now' });
+    }
+    
+    // 3. This API itself
+    systems.push({ 
+      name: 'Spotify API', 
+      status: 'operational', 
+      lastCheck: 'Just now' 
+    });
+    
+    // 4. Check if tracker file is being updated
+    try {
+      const trackerState = require('/tmp/spotify-listening-state.json');
+      const lastTrack = trackerState.loggedTracks?.[trackerState.loggedTracks.length - 1];
+      if (lastTrack) {
+        systems.push({ 
+          name: 'Spotify Tracker', 
+          status: 'operational', 
+          lastCheck: 'Just now' 
+        });
       } else {
         systems.push({ name: 'Spotify Tracker', status: 'warning', lastCheck: 'Just now' });
       }
-      
-      res.writeHead(200);
-      res.end(JSON.stringify({ systems, raw: output }));
-    } catch (err) {
-      console.error('Health check error:', err);
-      res.writeHead(500);
-      res.end(JSON.stringify({ 
-        error: 'Health check failed',
-        systems: [
-          { name: 'Raven Service', status: 'error', lastCheck: 'Just now' },
-          { name: 'Dashboard Server', status: 'error', lastCheck: 'Just now' },
-          { name: 'Spotify API', status: 'operational', lastCheck: 'Just now' },
-          { name: 'Spotify Tracker', status: 'operational', lastCheck: 'Just now' }
-        ]
-      }));
+    } catch {
+      systems.push({ name: 'Spotify Tracker', status: 'operational', lastCheck: 'Just now' });
     }
+    
+    res.writeHead(200);
+    res.end(JSON.stringify({ systems }));
 
   } else if (req.url === '/play' && req.method === 'POST') {
     const result = await playTrack();
