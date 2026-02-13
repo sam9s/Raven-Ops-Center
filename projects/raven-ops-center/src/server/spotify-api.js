@@ -300,6 +300,65 @@ const server = http.createServer(async (req, res) => {
       res.end(JSON.stringify({ error: err.message }));
     }
 
+  } else if (req.url === '/health') {
+    // Run self-check script and return results
+    try {
+      const { execSync } = require('child_process');
+      const output = execSync('bash /root/.openclaw/workspace/.scripts/self-check.sh', {
+        encoding: 'utf8',
+        timeout: 30000
+      });
+      
+      // Parse the output to extract system statuses
+      const systems = [];
+      
+      // Check OpenClaw Gateway
+      if (output.includes('Gateway: RUNNING')) {
+        systems.push({ name: 'Raven Service', status: 'operational', lastCheck: 'Just now' });
+      } else {
+        systems.push({ name: 'Raven Service', status: 'error', lastCheck: 'Just now' });
+      }
+      
+      // Check Dashboard
+      if (output.includes('Dashboard: RESPONDING')) {
+        systems.push({ name: 'Dashboard Server', status: 'operational', lastCheck: 'Just now' });
+      } else {
+        systems.push({ name: 'Dashboard Server', status: 'error', lastCheck: 'Just now' });
+      }
+      
+      // Check Spotify API
+      if (output.includes('Spotify API: RESPONDING')) {
+        systems.push({ name: 'Spotify API', status: 'operational', lastCheck: 'Just now' });
+      } else {
+        systems.push({ name: 'Spotify API', status: 'error', lastCheck: 'Just now' });
+      }
+      
+      // Spotify Tracker status from cron
+      const cronCheck = execSync('openclaw cron list 2>/dev/null | grep "spotify-tracker" | grep -c "enabled.*true"', {
+        encoding: 'utf8'
+      });
+      if (parseInt(cronCheck.trim()) > 0) {
+        systems.push({ name: 'Spotify Tracker', status: 'operational', lastCheck: 'Just now' });
+      } else {
+        systems.push({ name: 'Spotify Tracker', status: 'warning', lastCheck: 'Just now' });
+      }
+      
+      res.writeHead(200);
+      res.end(JSON.stringify({ systems, raw: output }));
+    } catch (err) {
+      console.error('Health check error:', err);
+      res.writeHead(500);
+      res.end(JSON.stringify({ 
+        error: 'Health check failed',
+        systems: [
+          { name: 'Raven Service', status: 'error', lastCheck: 'Just now' },
+          { name: 'Dashboard Server', status: 'error', lastCheck: 'Just now' },
+          { name: 'Spotify API', status: 'operational', lastCheck: 'Just now' },
+          { name: 'Spotify Tracker', status: 'operational', lastCheck: 'Just now' }
+        ]
+      }));
+    }
+
   } else if (req.url === '/play' && req.method === 'POST') {
     const result = await playTrack();
     res.writeHead(200);
@@ -335,6 +394,7 @@ server.listen(PORT, () => {
   console.log('  GET  /database       - Full database (sorted newest first)');
   console.log('  GET  /stats          - Stats');
   console.log('  GET  /discover       - AI recommendations (cached 3h)');
+  console.log('  GET  /health         - System health status');
   console.log('  POST /play           - Play');
   console.log('  POST /pause          - Pause');
   console.log('  POST /next           - Next track');

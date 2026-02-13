@@ -97,29 +97,30 @@ export default function MorningBriefing() {
   }
 
   async function fetchSystemStatus() {
-    const systems: SystemStatus[] = [
-      { name: 'Raven Service', status: 'operational', lastCheck: 'Just now' },
-      { name: 'Dashboard Server', status: 'operational', lastCheck: 'Just now' },
-      { name: 'Spotify API', status: 'operational', lastCheck: 'Just now' },
-      { name: 'Spotify Tracker', status: 'operational', lastCheck: 'Just now' }
-    ];
-
-    // Check each system
     try {
-      const dashboardRes = await fetch('http://localhost:8080', { method: 'HEAD' });
-      if (!dashboardRes.ok) systems[1].status = 'error';
-    } catch {
-      systems[1].status = 'error';
+      const response = await fetch(`${API_BASE}/health`);
+      const data = await response.json();
+      if (data.systems) {
+        setSystemStatus(data.systems);
+      } else {
+        // Fallback to default statuses
+        setSystemStatus([
+          { name: 'Raven Service', status: 'operational', lastCheck: 'Just now' },
+          { name: 'Dashboard Server', status: 'operational', lastCheck: 'Just now' },
+          { name: 'Spotify API', status: 'operational', lastCheck: 'Just now' },
+          { name: 'Spotify Tracker', status: 'operational', lastCheck: 'Just now' }
+        ]);
+      }
+    } catch (err) {
+      console.error('Health fetch error:', err);
+      // Show error state
+      setSystemStatus([
+        { name: 'Raven Service', status: 'error', lastCheck: 'Just now' },
+        { name: 'Dashboard Server', status: 'error', lastCheck: 'Just now' },
+        { name: 'Spotify API', status: 'error', lastCheck: 'Just now' },
+        { name: 'Spotify Tracker', status: 'error', lastCheck: 'Just now' }
+      ]);
     }
-
-    try {
-      const spotifyRes = await fetch(`${API_BASE}/discover`);
-      if (!spotifyRes.ok) systems[2].status = 'error';
-    } catch {
-      systems[2].status = 'error';
-    }
-
-    setSystemStatus(systems);
   }
 
   async function fetchStats() {
